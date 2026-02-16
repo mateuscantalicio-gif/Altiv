@@ -3,127 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nome da Empresa | Solução Profissional</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Altivor - Criamos posts, logotipos e sites profissionais para pequenos e médios empreendedores. Eleve sua marca e conquiste seu espaço no digital.">
+<title>Altivor | Eleve sua marca</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
+:root {
+  --primary: #2563eb;
+  --dark: #0f172a;
+  --gray: #f1f5f9;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #f8f9fa;
-  color: #333;
+  color: #1e293b;
+  background: white;
 }
 
-header {
-  background: #111827;
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(15,23,42,0.95);
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav h2 {
   color: white;
-  padding: 80px 20px;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* HERO */
+header {
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: white;
+  padding: 0 20px;
 }
 
 header h1 {
-  font-size: 42px;
+  font-size: 48px;
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 header p {
-  font-size: 18px;
-  opacity: 0.9;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
 .btn {
-  background: #2563eb;
-  color: white;
-  padding: 14px 28px;
-  text-decoration: none;
+  background: white;
+  color: var(--primary);
+  padding: 14px 30px;
   border-radius: 8px;
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  background: #e2e8f0;
+}
+
+/* SEÇÕES */
 section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
+  padding: 100px 8%;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
-.cards {
+.services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
 .card {
-  background: white;
-  padding: 30px;
+  background: var(--gray);
+  padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* PORTFÓLIO */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio img:hover {
+  transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+/* CTA */
+.cta {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* FOOTER */
 footer {
-  background: #111827;
+  background: var(--dark);
   color: white;
   text-align: center;
   padding: 30px;
-  margin-top: 50px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+@media(max-width: 768px){
+  header h1 {
+    font-size: 32px;
+  }
 }
 
 </style>
 </head>
 <body>
 
+<nav>
+  <h2>Altivor</h2>
+  <div>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
 <header>
-  <h1>Transformamos sua presença digital</h1>
-  <p>Sites profissionais que geram autoridade, confiança e novos clientes.</p>
-  <a href="#contato" class="btn">Solicitar Orçamento</a>
+  <div>
+    <h1>Eleve sua marca. Conquiste seu espaço no digital.</h1>
+    <p>Criamos posts, logotipos e sites profissionais para pequenos e médios empreendedores.</p>
+    <a href="#contato" class="btn">Solicitar Orçamento</a>
+  </div>
 </header>
 
-<section>
+<section id="servicos">
   <div class="section-title">
     <h2>Nossos Serviços</h2>
   </div>
 
-  <div class="cards">
+  <div class="services">
     <div class="card">
-      <h3>Site Institucional</h3>
-      <p>Ideal para empresas que desejam presença profissional online.</p>
+      <h3>Posts para Redes Sociais</h3>
+      <p>Design estratégico para aumentar engajamento e fortalecer sua marca.</p>
     </div>
-
     <div class="card">
-      <h3>Landing Page</h3>
-      <p>Página focada em conversão para captação de clientes.</p>
+      <h3>Logotipos Profissionais</h3>
+      <p>Identidade visual moderna e memorável para seu negócio.</p>
     </div>
-
     <div class="card">
-      <h3>Otimização SEO</h3>
-      <p>Melhor posicionamento no Google para sua empresa.</p>
+      <h3>Criação de Sites</h3>
+      <p>Sites rápidos, responsivos e prontos para gerar clientes.</p>
+    </div>
+    <div class="card">
+      <h3>Manutenção e Atualizações</h3>
+      <p>Seu site sempre atualizado, seguro e funcionando perfeitamente.</p>
     </div>
   </div>
 </section>
 
-<section id="contato">
+<section id="portfolio">
   <div class="section-title">
-    <h2>Entre em Contato</h2>
+    <h2>Portfólio</h2>
   </div>
-  <p style="text-align:center;">
-    WhatsApp: (11) 99999-9999<br>
-    Email: contato@empresa.com
-  </p>
+
+  <div class="portfolio">
+    <img src="https://via.placeholder.com/400x300" onclick="openLightbox(this.src)">
+    <img src="https://via.placeholder.com/400x300" onclick="openLightbox(this.src)">
+    <img src="https://via.placeholder.com/400x300" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <h2>Pronto para elevar sua marca?</h2>
+  <p>Entre em contato e vamos transformar sua presença digital.</p>
+  <br>
+  <a href="https://wa.me/5511961436410" class="btn">Falar no WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 Nome da Empresa - Todos os direitos reservados
+  © 2026 Altivor - Todos os direitos reservados
 </footer>
+
+<a href="https://wa.me/5511961436410" class="whatsapp">💬</a>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById('lightbox').style.display = 'flex';
+  document.getElementById('lightbox-img').src = src;
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
 
 </body>
 </html>
